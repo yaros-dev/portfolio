@@ -1,0 +1,51 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+
+    &__lable {
+        text-transform: uppercase;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: 2; // line-height / font-size = частини (24 / 12 = 2)
+        letter-spacing: em(7.5, 12); // 12 - fz
+        color: $grayColor;
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+
+        &::before {
+            content: '';
+            width: rem(16);
+            height: rem(2);
+            background-color: #D9D9D9;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: em(8, 12);
+        }
+
+    }
+
+
+    &__value {
+        font-family: 'Plus Jakarta Sans';
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: 1.25;
+        color: $mainColor;
+
+        span {
+            color: $purpleColor;
+        }
+
+        &_big {
+            font-size: rem(44);
+            line-height: math.div(55, 44);
+        }
+    }
+}
+
+.text {
+    line-height: math.div(32, 16);
+}
